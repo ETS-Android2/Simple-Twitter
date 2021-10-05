@@ -75,6 +75,7 @@ public class TimelineActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(int statusCode, Headers headers, JSON json) {
                         Log.i(TAG, "onSuccess for loadMoreData!" + json.toString());
+                        Log.i(TAG,"maxId = " + tweets.get(tweets.size() - 1).id);
                         //  --> Deserialize and construct new model objects from the API response
                         JSONArray jsonArray = json.jsonArray;
                         try {
